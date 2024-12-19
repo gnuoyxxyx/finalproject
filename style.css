@@ -1,0 +1,50 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+function displayTitle(title) {
+  // 타이틀 스타일 및 위치
+  fill(255);
+  textAlign(CENTER, CENTER);
+  textSize(20);
+  text(title, width / 2, 50);
+
+  // 뒤로가기 화살표
+  textSize(18);
+  textAlign(LEFT, CENTER);
+  text("<", 20, 50);
+}
+
+function displayMessage(message) {
+  // 안내 메시지 스타일 및 위치
+  fill(255);
+  textAlign(CENTER, CENTER);
+  textSize(24);
+  text(message, width / 2, height / 2 - 50);
+}
+
+function drawButtons() {
+  // 버튼 스타일 설정
+  noStroke();
+  textAlign(CENTER, CENTER);
+  textSize(16);
+
+  // 취소 버튼
+  fill('#575760');
+  rect(width / 2 - 173, 738, 164, 52, 12);
+  fill(255); // 텍스트 색상
+  text("취소", 102, 764);
+  textSize(18);
+  
+
+  // 활성화 버튼
+  fill('#FF3B30'); // 빨간색
+  rect(width / 2 + 8, 738, 164, 52, 12);
+  fill(255); // 텍스트 색상
+  text("활성화", 284, 764);
+  textSize(18);
+  
